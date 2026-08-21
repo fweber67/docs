@@ -1,0 +1,61 @@
+---
+title: "Benutzerrollen"
+sidebarTitle: "Benutzerrollen"
+description: "Die drei Rollen in FinanzDash und ihre Rechte"
+icon: "shield"
+---
+
+FinanzDash unterscheidet drei Benutzerrollen mit unterschiedlichen Berechtigungen. Ihre Rolle bestimmt, welche Menuepunkte und Funktionen Sie sehen.
+
+## Super-Administrator
+
+Der Super-Administrator hat die umfassendsten Rechte. Er kann alles, was ein Administrator kann, und zusaetzlich:
+
+- Andere Super-Administratoren verwalten (befoerdern und herabstufen)
+- KI-Anbieter konfigurieren (API-Schluessel, Modell)
+- KI-Berichtszugang fuer Administratoren aktivieren und deaktivieren
+- Token-Kontingente (Starter, Standard, Professional, Individuell) vergeben
+- DATEV-Schnittstelle einrichten und nutzen
+- Alle Kanzleien einsehen und filtern
+- Unternehmen mehreren Benutzern gleichzeitig zuweisen
+
+Super-Administratoren werden durch ein Kronen-Symbol (gold) gekennzeichnet.
+
+## Administrator
+
+Administratoren sind Kanzleimitarbeiter, die Daten und Benutzer verwalten. Sie koennen:
+
+- Unternehmen anlegen, bearbeiten und loeschen
+- Benutzer einladen, bearbeiten und loeschen
+- Finanzdaten hochladen, ersetzen und loeschen
+- Dashboards und Widgets erstellen und bearbeiten
+- KI-Berichte erstellen und veroeffentlichen (sofern vom Super-Administrator freigeschaltet)
+- Berichte an Unternehmen zuweisen
+
+Administratoren koennen auf den Bereich ihrer zugewiesenen Kanzlei(n) beschraenkt sein. Sie sehen dann nur Unternehmen und Benutzer dieser Kanzleien.
+
+Administratoren werden durch ein Schild-Symbol (tuerkis) gekennzeichnet.
+
+## Benutzer (Mandant)
+
+Benutzer mit der Rolle "user" haben reinen Lesezugriff. Sie koennen:
+
+- Dashboards fuer ihnen zugewiesene Unternehmen ansehen
+- Zwischen zugewiesenen Unternehmen wechseln
+- Ihr eigenes Profil einsehen
+
+Sie koennen keine Unternehmen, Benutzer, Daten oder Berichte verwalten. In der Seitenleiste sehen sie nur den Menuepunkt "Dashboards".
+
+## Rollen-uebersicht
+
+| Funktion | Super-Admin | Administrator | Benutzer |
+| --- | :-: | :-: | :-: |
+| Dashboards ansehen | Ja | Ja | Ja |
+| Unternehmen verwalten | Ja | Ja | Nein |
+| Benutzer verwalten | Ja | Ja | Nein |
+| Daten hochladen | Ja | Ja | Nein |
+| Dashboards bearbeiten | Ja | Ja | Nein |
+| KI-Berichte erstellen | Ja | Ja (wenn freigeschaltet) | Nein |
+| KI-Einstellungen aendern | Ja | Nein | Nein |
+| DATEV-Schnittstelle | Ja | Nein | Nein |
+| Super-Admins verwalten | Ja | Nein | Nein |

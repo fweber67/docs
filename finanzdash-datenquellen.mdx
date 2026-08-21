@@ -1,0 +1,50 @@
+---
+title: "Datenquellen"
+sidebarTitle: "Datenquellen"
+description: "Finanzdaten hochladen und verwalten"
+icon: "database"
+---
+
+Datenquellen sind die Grundlage fuer Dashboards und KI-Berichte. Sie koennen Finanzdaten als Datei hochladen oder – als Super-Administrator – per DATEV-Schnittstelle automatisch abrufen.
+
+## Datei hochladen
+
+1. Klicken Sie in der Seitenleiste auf "Datenquellen"
+2. Waehlen Sie ein Unternehmen aus der Dropdown-Liste
+3. Waehlen Sie die Buchhaltungsquelle: DATEV, BMD oder Andere
+4. Ziehen Sie die Datei per Drag-and-Drop in das Upload-Feld oder klicken Sie, um eine Datei auszuwaehlen
+5. Unterstuetzte Formate: CSV, XLSX, XLS
+
+### DATEV-Dateien automatisch verarbeiten
+
+Wenn Sie als Buchhaltungsquelle "DATEV" auswaehlen, wird die hochgeladene CSV-Datei automatisch verarbeitet:
+
+- Die DATEV-CSV wird in eine strukturierte Excel-Datei umgewandelt
+- Ein Fortschrittsbalken zeigt den Verarbeitungsfortschritt an
+- Die verarbeitete Datei steht anschliessend fuer Dashboards und Berichte zur Verfuegung
+
+## Datenquellen ansehen
+
+Unter dem Upload-Bereich sehen Sie eine Liste aller Datenquellen des ausgewaehlten Unternehmens. Diese Liste enthaelt sowohl hochgeladene Dateien als auch per DATEV-Schnittstelle abgerufene Daten.
+
+## Datei herunterladen
+
+Klicken Sie auf das Download-Symbol neben einer Datei, um sie herunterzuladen.
+
+## Datei ersetzen
+
+Wenn Sie eine Datei durch eine neuere Version ersetzen moechten:
+
+1. Klicken Sie auf das Ersetzen-Symbol
+2. Eine Warnung zeigt an, welche Berichte auf diese Datei zugreifen und betroffen sein koennten
+3. Laden Sie die neue Datei hoch
+4. Die alte Datei wird ersetzt
+
+## Datei loeschen
+
+1. Klicken Sie auf das Loesch-Symbol neben einer Datei
+2. Bestaetigen Sie die Loeschung
+
+## DATEV-Schnittstelle
+
+Super-Administratoren koennen die DATEV-API-Schnittstelle nutzen, um Finanzdaten automatisch abzurufen, ohne Dateien manuell hochzuladen. Details dazu finden Sie auf der Seite [DATEV-Integration](/finanzdash-datev).
