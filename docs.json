@@ -66,12 +66,12 @@
         {
           "anchor": "Demo Dashboard",
           "href": "https://demo.finanzdash.com/",
-          "icon": "layout-dashboard"
+          "icon": "chart-bar"
         },
         {
           "anchor": "Product Presentation",
           "href": "https://slides.finanzdash.com/",
-          "icon": "file-powerpoint"
+          "icon": "presentation"
         }
       ]
     }
