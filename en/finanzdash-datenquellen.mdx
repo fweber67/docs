@@ -1,0 +1,50 @@
+---
+title: "Data sources"
+sidebarTitle: "Data sources"
+description: "Upload and manage financial data"
+icon: "database"
+---
+
+Data sources are the foundation for dashboards and AI reports. You can upload financial data as a file or, as a super administrator, retrieve it automatically via the DATEV interface.
+
+## Upload a file
+
+1. Click "Data sources" in the sidebar
+2. Select a company from the dropdown list
+3. Select the accounting source: DATEV, BMD, or other
+4. Drag and drop the file into the upload area or click to select a file
+5. Supported formats: CSV, XLSX, XLS
+
+### Automatic DATEV file processing
+
+If you select "DATEV" as the accounting source, the uploaded CSV file is processed automatically:
+
+- The DATEV CSV is converted into a structured Excel file
+- A progress bar shows the processing progress
+- Once processed, the file is available for dashboards and reports
+
+## View data sources
+
+Below the upload area, you see a list of all data sources for the selected company. This list includes both uploaded files and data retrieved via the DATEV interface.
+
+## Download a file
+
+Click the download icon next to a file to download it.
+
+## Replace a file
+
+To replace a file with a newer version:
+
+1. Click the replace icon
+2. A warning shows which reports use this file and could be affected
+3. Upload the new file
+4. The old file is replaced
+
+## Delete a file
+
+1. Click the delete icon next to a file
+2. Confirm the deletion
+
+## DATEV interface
+
+Super administrators can use the DATEV API interface to retrieve financial data automatically, without uploading files manually. For details, see the [DATEV integration](/en/finanzdash-datev) page.

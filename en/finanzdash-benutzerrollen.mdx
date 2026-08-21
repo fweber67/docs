@@ -1,0 +1,61 @@
+---
+title: "User roles"
+sidebarTitle: "User roles"
+description: "The three roles in FinanzDash and their permissions"
+icon: "shield"
+---
+
+FinanzDash distinguishes three user roles with different permissions. Your role determines which menu items and features you see.
+
+## Super administrator
+
+The super administrator has the most extensive permissions. They can do everything an administrator can, and additionally:
+
+- Manage other super administrators (promote and demote)
+- Configure AI providers (API key, model)
+- Enable and disable AI report access for administrators
+- Assign token quotas (Starter, Standard, Professional, Custom)
+- Set up and use the DATEV interface
+- View and filter all firms
+- Assign companies to multiple users at once
+
+Super administrators are marked with a gold crown icon.
+
+## Administrator
+
+Administrators are firm employees who manage data and users. They can:
+
+- Create, edit, and delete companies
+- Invite, edit, and delete users
+- Upload, replace, and delete financial data
+- Create and edit dashboards and widgets
+- Create and publish AI reports (if enabled by the super administrator)
+- Assign reports to companies
+
+Administrators can be restricted to their assigned firm(s). They then only see companies and users of those firms.
+
+Administrators are marked with a turquoise shield icon.
+
+## User (client)
+
+Users with the "user" role have read-only access. They can:
+
+- View dashboards for the companies assigned to them
+- Switch between assigned companies
+- View their own profile
+
+They cannot manage companies, users, data, or reports. In the sidebar, they only see the "Dashboards" menu item.
+
+## Role overview
+
+| Feature | Super admin | Administrator | User |
+| --- | :-: | :-: | :-: |
+| View dashboards | Yes | Yes | Yes |
+| Manage companies | Yes | Yes | No |
+| Manage users | Yes | Yes | No |
+| Upload data | Yes | Yes | No |
+| Edit dashboards | Yes | Yes | No |
+| Create AI reports | Yes | Yes (if enabled) | No |
+| Change AI settings | Yes | No | No |
+| DATEV interface | Yes | No | No |
+| Manage super admins | Yes | No | No |
