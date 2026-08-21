@@ -9,12 +9,55 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "languages": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
+        "language": "de",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              {
+                "group": "FinanzDash Handbuch",
+                "icon": "book-open",
+                "pages": [
+                  "de/finanzdash-uebersicht",
+                  "de/finanzdash-benutzerrollen",
+                  "de/finanzdash-anmeldung",
+                  "de/finanzdash-dashboards",
+                  "de/finanzdash-unternehmen",
+                  "de/finanzdash-benutzer",
+                  "de/finanzdash-datenquellen",
+                  "de/finanzdash-ki-berichte",
+                  "de/finanzdash-datev"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              {
+                "group": "FinanzDash Manual",
+                "icon": "book-open",
+                "pages": [
+                  "en/finanzdash-overview",
+                  "en/finanzdash-user-roles",
+                  "en/finanzdash-login",
+                  "en/finanzdash-dashboards",
+                  "en/finanzdash-companies",
+                  "en/finanzdash-users",
+                  "en/finanzdash-data-sources",
+                  "en/finanzdash-ai-reports",
+                  "en/finanzdash-datev"
+                ]
+              }
+            ]
+          }
         ]
       }
     ],
@@ -31,29 +74,7 @@
           "icon": "newspaper"
         }
       ]
-    },
-    "groups": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          {
-            "group": "FinanzDash Handbuch",
-            "icon": "book-open",
-            "pages": [
-              "finanzdash-uebersicht",
-              "finanzdash-benutzerrollen",
-              "finanzdash-anmeldung",
-              "finanzdash-dashboards",
-              "finanzdash-unternehmen",
-              "finanzdash-benutzer",
-              "finanzdash-datenquellen",
-              "finanzdash-ki-berichte",
-              "finanzdash-datev"
-            ]
-          }
-        ]
-      }
-    ]
+    }
   },
   "logo": {
     "light": "/logo/light.svg",
