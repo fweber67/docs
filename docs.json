@@ -45,7 +45,15 @@
                 "group": "FinanzDash Manual",
                 "icon": "book-open",
                 "pages": [
-                  "en/finanzdash-english"
+                  "en/finanzdash-uebersicht",
+                  "en/finanzdash-benutzerrollen",
+                  "en/finanzdash-anmeldung",
+                  "en/finanzdash-dashboards",
+                  "en/finanzdash-unternehmen",
+                  "en/finanzdash-benutzer",
+                  "en/finanzdash-datenquellen",
+                  "en/finanzdash-ki-berichte",
+                  "en/finanzdash-datev"
                 ]
               }
             ]

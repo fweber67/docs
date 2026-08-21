@@ -1,0 +1,91 @@
+---
+title: "AI reports"
+sidebarTitle: "AI reports"
+description: "Create and publish financial reports with AI"
+icon: "sparkles"
+---
+
+With FinanzDash, you can create AI-generated financial reports. The AI analyzes your uploaded financial data and produces a structured report with text and charts.
+
+## Prerequisites
+
+To create AI reports, you need:
+
+- The **administrator** role (or super administrator)
+- Approval by the super administrator (the report feature must be enabled for you)
+- At least one uploaded data file
+
+## Create a report
+
+1. Click "Reports" in the sidebar
+2. Click "New report"
+3. The report editor opens:
+   - **Prompt** – Describe what the report should contain (for example, "Create a P&L analysis with a comparison to the previous year")
+   - **Main data file** – Select the primary data file
+   - **Additional files** – Optionally add more files
+4. Click "Generate"
+
+The AI analyzes the data and creates a report. This process can take a few seconds.
+
+## Token usage
+
+Each report generation consumes tokens. At the top of the report view, you see a bar that shows your monthly usage relative to your quota.
+
+Token quotas are assigned in tiers:
+
+- **Starter** – Small quota for occasional reports
+- **Standard** – Medium quota
+- **Professional** – Large quota for frequent use
+- **Custom** – Set by the super administrator
+
+## View and edit a report
+
+After generation, the report appears as a draft. You can:
+
+- **Preview** – View the report in preview mode
+- **Edit** – Adjust the prompt or data and regenerate
+- **Charts** – The report can contain charts (bar, pie, and line charts)
+
+## Publish a report
+
+1. In the report, click "Publish"
+2. Select the companies the report should be visible to
+3. Confirm the publication
+
+Published reports can be viewed by the assigned companies.
+
+## Filter and search reports
+
+In the report list, you can:
+
+- Switch between card and list view
+- Search by title
+- Filter by "All" or "My reports"
+- Sort by columns
+
+## Delete a report
+
+1. Click the delete icon on a report
+2. Confirm the deletion
+
+## AI settings (super administrator only)
+
+Only the super administrator who configured the AI can change the settings:
+
+1. In the report view, click "Settings"
+2. Select the AI provider: OpenAI, Anthropic (Claude), or Google (Gemini)
+3. Enter the API key
+4. Select the model
+5. Save the settings
+
+The API key is stored encrypted. Other administrators only see the provider and model, not the key.
+
+## Manage report access (super administrator)
+
+The super administrator can set for each administrator:
+
+- Whether the report feature is enabled or disabled
+- Which token quota (tier) is assigned
+- For the "Custom" tier, a user-defined limit
+
+In addition, an admin dashboard provides an overview of all reports and token usage.
