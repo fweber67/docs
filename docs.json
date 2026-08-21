@@ -36,8 +36,6 @@
       {
         "group": "Getting Started",
         "pages": [
-          "index",
-          "quickstart",
           {
             "group": "FinanzDash Handbuch",
             "icon": "book-open",
