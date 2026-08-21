@@ -31,7 +31,29 @@
           "icon": "newspaper"
         }
       ]
-    }
+    },
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          {
+            "group": "FinanzDash Handbuch",
+            "icon": "book-open",
+            "pages": [
+              "finanzdash-uebersicht",
+              "finanzdash-benutzerrollen",
+              "finanzdash-anmeldung",
+              "finanzdash-dashboards",
+              "finanzdash-unternehmen",
+              "finanzdash-benutzer",
+              "finanzdash-datenquellen",
+              "finanzdash-ki-berichte",
+              "finanzdash-datev"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",

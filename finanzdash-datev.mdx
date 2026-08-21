@@ -1,0 +1,53 @@
+---
+title: "DATEV-Integration"
+sidebarTitle: "DATEV-Integration"
+description: "DATEV-Schnittstelle einrichten und nutzen"
+icon: "plug"
+---
+
+Die DATEV-Integration ermoeglicht es Super-Administratoren, Finanzdaten automatisch ueber die DATEV-API abzurufen, ohne Dateien manuell hochzuladen.
+
+## Voraussetzungen
+
+- Sie benoetigen die Rolle **Super-Administrator**
+- Fuer das Unternehmen muss die DATEV-Mandantennummer hinterlegt sein (siehe [Unternehmen verwalten](/finanzdash-unternehmen))
+
+## DATEV verbinden
+
+1. Klicken Sie in der Seitenleiste auf "Datenquellen"
+2. Waehlen Sie ein Unternehmen aus
+3. Klicken Sie auf "DATEV verbinden"
+4. Ein neues Fenster oeffnet sich mit der DATEV-Anmeldeseite
+5. Melden Sie sich mit Ihren DATEV-Zugangsdaten an
+6. Erteilen Sie die Berechtigung fuer FinanzDash
+7. Das Fenster schliesst sich automatisch und die Verbindung wird hergestellt
+
+Nach erfolgreicher Verbindung wird der Verbindungsstatus als "Verbunden" angezeigt.
+
+## Summen- und Saldenliste abrufen
+
+Nachdem die DATEV-Verbindung hergestellt wurde, koennen Sie die Summen- und Saldenliste (SuSa) abrufen:
+
+1. Klicken Sie auf "SuSa abrufen"
+2. FinanzDash ruft die Daten fuer das aktuelle und das vorherige Wirtschaftsjahr ab
+3. Die abgerufenen Daten erscheinen in der Datenquellen-Liste
+4. Die Daten stehen sofort fuer Dashboards und KI-Berichte zur Verfuegung
+
+## DATEV-Mandantenliste
+
+Ueber die DATEV-Schnittstelle koennen Sie auch die Liste Ihrer DATEV-Mandanten abrufen. Dies hilft dabei, die richtigen Unternehmen in FinanzDash anzulegen.
+
+## Verbindung trennen
+
+1. Klicken Sie auf "Trennen"
+2. Die DATEV-Verbindung wird getrennt
+3. Bereits abgerufene Daten bleiben erhalten
+
+Sie koennen die Verbindung jederzeit wiederherstellen.
+
+## Sicherheit
+
+- Die DATEV-Zugriffstoken werden verschluesselt gespeichert
+- Alle API-Aufrufe werden in einem Audit-Protokoll aufgezeichnet (mit Zeitstempel, Dauer und Status)
+- Die Tokens werden automatisch aktualisiert, wenn sie ablaufen
+- Nur Super-Administratoren koennen die DATEV-Schnittstelle nutzen
