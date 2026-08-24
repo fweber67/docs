@@ -16,7 +16,7 @@ Dashboards are the heart of FinanzDash. They display financial metrics, charts, 
 
 ## Report types
 
-A dashboard can contain several widget types:
+A dashboard can contain several report types, which are provided by default:
 
 - **KPI dashboard** – Metrics such as revenue and EBITDA as tiles
 - **P&L dashboard** – Profit and loss statement with year-over-year comparison
@@ -24,6 +24,31 @@ A dashboard can contain several widget types:
 - **Working capital** – Chart showing working capital and its development
 - **Year comparison** – Monthly year-over-year comparison of individual P&L categories
 - **Monthly trend report** - Monthly trend report of individual P&L categories
+
+## Structure of the default report types
+
+### **Account selection by category**
+
+| **Category** | **Selected accounts** | **Logic** |
+| :-- | :-- | :-- |
+| **Revenue** | All accounts starting with `4` | Sum of all `4xxx` accounts |
+| **Direct costs** | All accounts starting with `5` | Sum of all `5xxx` accounts |
+| **Gross profit** | — | Revenue minus direct costs |
+| **Personnel costs** | All accounts starting with `6` | Sum of all `6xxx` accounts |
+| **Other expenses** | All accounts starting with `7`, **excluding account** `7736` | Sum of `7xxx` minus depreciation |
+| **Depreciation** | Only account `7736` | Single specific account |
+| **Financial expenses** | All accounts starting with `8`, **excluding account** `8500` | Sum of `8xxx` minus taxes |
+| **Taxes** | Only account `8500` | Single specific account |
+
+### **How subtotals are calculated**
+
+- **Gross profit** = Revenue − Direct costs
+- **EBITDA** = Gross profit − Personnel costs − Other expenses
+- **EBIT** = EBITDA − Depreciation (account 7736)
+- **EBT** (earnings before taxes) = EBIT − Financial expenses
+- **Net income after taxes** = EBT − Taxes (account 8500)
+
+Account `7736` (depreciation) is pulled **out** of "Other expenses" (the `7` series) so that EBITDA does not include depreciation, and account `8500` (taxes) is pulled out of "Financial expenses" (the `8` series) so that EBT is calculated before taxes. Each row shows both month-to-date (MTD) and year-to-date (YTD) values with a year-over-year comparison.
 
 ## Create a dashboard (administrator)
 
