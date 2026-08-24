@@ -10,7 +10,7 @@ The DATEV integration allows super administrators to automatically retrieve fina
 ## Prerequisites
 
 - You need the **super administrator** role
-- The DATEV client number must be stored for the company (see [Manage companies](/en/finanzdash-unternehmen))
+- The DATEV client number must be set for the company (see [Manage companies](/finanzdash-unternehmen))
 
 ## Connect DATEV
 
@@ -19,35 +19,35 @@ The DATEV integration allows super administrators to automatically retrieve fina
 3. Click "Connect DATEV"
 4. A new window opens with the DATEV sign-in page
 5. Sign in with your DATEV credentials
-6. Grant permission to FinanzDash
+6. Grant permission for FinanzDash
 7. The window closes automatically and the connection is established
 
-After a successful connection, the connection status is displayed as "Connected".
+Once the connection is successful, the connection status is shown as "Connected".
 
 ## Retrieve the trial balance
 
-Once the DATEV connection is established, you can retrieve the trial balance (SuSa):
+After the DATEV connection has been established, you can retrieve the trial balance (SuSa):
 
 1. Click "Retrieve SuSa"
-2. FinanzDash retrieves the data for the current and the previous fiscal year
+2. FinanzDash retrieves the data for the current and previous fiscal year
 3. The retrieved data appears in the data sources list
 4. The data is immediately available for dashboards and AI reports
 
 ## DATEV client list
 
-Through the DATEV interface, you can also retrieve the list of your DATEV clients. This helps you create the correct companies in FinanzDash.
+You can also retrieve the list of your DATEV clients via the DATEV interface. This helps you create the correct companies in FinanzDash.
 
 ## Disconnect
 
 1. Click "Disconnect"
-2. The DATEV connection is terminated
-3. Data that has already been retrieved is retained
+2. The DATEV connection is closed
+3. Data that has already been retrieved is kept
 
-You can restore the connection at any time.
+You can reconnect at any time.
 
 ## Security
 
-- DATEV access tokens are stored encrypted
+- The DATEV access tokens are stored encrypted
 - All API calls are recorded in an audit log (with timestamp, duration, and status)
 - Tokens are refreshed automatically when they expire
 - Only super administrators can use the DATEV interface
