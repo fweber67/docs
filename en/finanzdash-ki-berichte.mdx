@@ -12,80 +12,100 @@ With FinanzDash, you can create AI-generated financial reports. The AI analyzes 
 To create AI reports, you need:
 
 - The **administrator** role (or super administrator)
-- Approval by the super administrator (the report feature must be enabled for you)
-- At least one uploaded data file
+- Activation by the super administrator (the report feature must be enabled for you)
+- At least one uploaded data source
+
+## Client users
+
+Client users can view reports created by administrators via the dashboard of their assigned company. For the view, they can choose from 5 different chart types and color schemes, change the chart title, and show or hide the legend. Client users also see the prompt that was used to create the report and can switch between chart and table views.
 
 ## Create a report
 
 1. Click "Reports" in the sidebar
 2. Click "New report"
 3. The report editor opens:
-   - **Prompt** – Describe what the report should contain (for example, "Create a P&L analysis with a comparison to the previous year")
-   - **Main data file** – Select the primary data file
-   - **Additional files** – Optionally add more files
-4. Click "Generate"
+   - **Report name** - Enter a descriptive report name
+   - **Company** - Select a company
+   - **Selected data sources** – Select the primary data source
+   - **Additional files** – Optionally, you can add up to 4 more data sources
+   - **Data source preview** - After selecting at least 1 data source, a preview of the content of each data source appears below
+   - **Prompt** – Describe what the report should contain (for example, "Create a quarterly revenue report as a bar chart")
+4. Click "Create report"
 
 The AI analyzes the data and creates a report. This process can take a few seconds.
 
 ## Token usage
 
-Each report generation consumes tokens. At the top of the report view, you see a bar that shows your monthly usage relative to your quota.
+Each report generation consumes tokens. At the top of the report view, you see a bar showing your monthly usage relative to your quota. Below that, the currently used AI model is displayed.
 
 Token quotas are assigned in tiers:
 
-- **Starter** – Small quota for occasional reports
-- **Standard** – Medium quota
-- **Professional** – Large quota for frequent use
-- **Custom** – Set by the super administrator
+- **Starter** – 500,000 tokens for occasional use
+- **Standard** – 1,500,000 tokens for regular use
+- **Professional** – 4,500,000 tokens for intensive use
 
-## View and edit a report
+## Finalize the report
 
-After generation, the report appears as a draft. You can:
+After generation, the report appears as a draft. You receive a chart and a report in the form of a management summary.
 
-- **Preview** – View the report in preview mode
-- **Edit** – Adjust the prompt or data and regenerate
-- **Charts** – The report can contain charts (bar, pie, and line charts)
+You can:
+
+- **View** – The report changes from draft to a finalized report
+- **Refine** – Adjust the prompt or the data and regenerate the report
+
+After you click "View", the finalized report appears with the following components:
+
+- **Prompt** - By clicking "Prompt", you can see the prompt that was used again
+- **Management summary** - A brief, concise description of the content and results of the report
+- **Chart** - The report result shown as a chart (5 different chart types are available)
+- **Report** - From the chart view, you can switch to a table view
+- **Customize chart** - You can change the chart's color scheme (5 schemes are available), change the report title, and show or hide the legend
 
 ## Publish a report
 
-1. In the report, click "Publish"
-2. Select the companies the report should be visible to
-3. Confirm the publication
+1. In the finalized report, click "Publish" at the top right, or later in the report list
+2. Select the company for which the report should be visible
+3. Confirm the publication by clicking "Save"
 
-Published reports can be viewed by the assigned companies.
+Published reports can be viewed by the client users assigned to the company.
 
 ## Filter and search reports
 
 In the report list, you can:
 
-- Switch between card and list view
-- Search by title
+- Switch between card and list views
+- Search by report name or user
 - Filter by "All" or "My reports"
-- Sort by columns
+- Sort by columns in the list view
+
+## Edit a report
+
+1. Click the edit icon on a report in the card or list view
+2. Select the data sources
+3. Click "Create report"
 
 ## Delete a report
 
 1. Click the delete icon on a report
-2. Confirm the deletion
+2. Confirm by clicking "Delete"
 
 ## AI settings (super administrator only)
 
 Only the super administrator who configured the AI can change the settings:
 
 1. In the report view, click "Settings"
-2. Select the AI provider: OpenAI, Anthropic (Claude), or Google (Gemini)
+2. Select the AI provider, such as OpenAI, Anthropic (Claude), or Google (Gemini)
 3. Enter the API key
 4. Select the model
 5. Save the settings
 
-The API key is stored encrypted. Other administrators only see the provider and model, not the key.
+The API key is stored encrypted. Other administrators only see the provider and the model, not the key.
 
 ## Manage report access (super administrator)
 
-The super administrator can set for each administrator:
+The super administrator can set, for each administrator:
 
 - Whether the report feature is enabled or disabled
 - Which token quota (tier) is assigned
-- For the "Custom" tier, a user-defined limit
 
-In addition, an admin dashboard provides an overview of all reports and token usage.
+In addition, there is an admin dashboard that gives the super administrator an overview of all reports and token usage.

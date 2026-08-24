@@ -10,22 +10,22 @@ Data sources are the foundation for dashboards and AI reports. You can upload fi
 ## Upload a file
 
 1. Click "Data sources" in the sidebar
-2. Select a company from the dropdown list
-3. Select the accounting source: DATEV, BMD, or other
-4. Drag and drop the file into the upload area or click to select a file
-5. Supported formats: CSV, XLSX, XLS
+2. Select a company from the dropdown
+3. Select the accounting source: DATEV MVZ Export, BMD Export, or Other
+4. Drag and drop the file into the upload field, or click to select a file
+5. Supported formats: CSV, XLSX, XLS, XML, TXT
 
-### Automatic DATEV file processing
+### Process DATEV files automatically
 
-If you select "DATEV" as the accounting source, the uploaded CSV file is processed automatically:
+If you select "DATEV MVZ Export" as the accounting source, the uploaded CSV file is processed automatically:
 
 - The DATEV CSV is converted into a structured Excel file
 - A progress bar shows the processing progress
-- Once processed, the file is available for dashboards and reports
+- The processed file is then available for dashboards and reports
 
 ## View data sources
 
-Below the upload area, you see a list of all data sources for the selected company. This list includes both uploaded files and data retrieved via the DATEV interface.
+Below the upload area, you see a list of all data sources for the selected company. This list contains both uploaded files and data retrieved via the DATEV interface.
 
 ## Download a file
 
@@ -33,18 +33,21 @@ Click the download icon next to a file to download it.
 
 ## Replace a file
 
-To replace a file with a newer version:
+If you want to replace a file with a newer version:
 
 1. Click the replace icon
-2. A warning shows which reports use this file and could be affected
-3. Upload the new file
-4. The old file is replaced
+2. A warning shows which reports access this file and are affected
+3. Select the accounting system
+4. Click "Check new file"
+5. If the new file is compatible, you can upload it by clicking "Replace data source"
+6. The old file is replaced
 
 ## Delete a file
 
 1. Click the delete icon next to a file
-2. Confirm the deletion
+2. You see information about which reports use this data source
+3. Confirm the deletion
 
 ## DATEV interface
 
-Super administrators can use the DATEV API interface to retrieve financial data automatically, without uploading files manually. For details, see the [DATEV integration](/en/finanzdash-datev) page.
+Super administrators can use the DATEV API interface to retrieve financial data automatically, without uploading files manually. For details, see [DATEV integration](/finanzdash-datev).

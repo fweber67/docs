@@ -9,17 +9,17 @@ FinanzDash distinguishes three user roles with different permissions. Your role 
 
 ## Super administrator
 
-The super administrator has the most extensive permissions. They can do everything an administrator can, and additionally:
+The super administrator has the most extensive rights. They can do everything an administrator can, plus:
 
-- Manage other super administrators (promote and demote)
-- Configure AI providers (API key, model)
+- Manage other users (promote and demote)
+- Configure the AI provider (API key, model)
 - Enable and disable AI report access for administrators
 - Assign token quotas (Starter, Standard, Professional, Custom)
 - Set up and use the DATEV interface
 - View and filter all firms
 - Assign companies to multiple users at once
 
-Super administrators are marked with a gold crown icon.
+Super administrators are marked with a crown icon (gold).
 
 ## Administrator
 
@@ -32,28 +32,27 @@ Administrators are firm employees who manage data and users. They can:
 - Create and publish AI reports (if enabled by the super administrator)
 - Assign reports to companies
 
-Administrators can be restricted to their assigned firm(s). They then only see companies and users of those firms.
+Administrators are limited to the scope of the firm(s) they are assigned to. They only see companies and users of those firms.
 
-Administrators are marked with a turquoise shield icon.
+Administrators are marked with a shield icon (turquoise).
 
-## User (client)
+## Client user
 
-Users with the "user" role have read-only access. They can:
+Users with the "client user" role have read-only access. They can:
 
-- View dashboards for the companies assigned to them
+- View dashboards for companies assigned to them
 - Switch between assigned companies
-- View their own profile
 
 They cannot manage companies, users, data, or reports. In the sidebar, they only see the "Dashboards" menu item.
 
 ## Role overview
 
-| Feature | Super admin | Administrator | User |
+| Feature | Super admin | Administrator | Client user |
 | --- | :-: | :-: | :-: |
 | View dashboards | Yes | Yes | Yes |
 | Manage companies | Yes | Yes | No |
 | Manage users | Yes | Yes | No |
-| Upload data | Yes | Yes | No |
+| Upload data sources | Yes | Yes | No |
 | Edit dashboards | Yes | Yes | No |
 | Create AI reports | Yes | Yes (if enabled) | No |
 | Change AI settings | Yes | No | No |
