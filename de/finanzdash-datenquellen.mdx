@@ -5,27 +5,27 @@ description: "Finanzdaten hochladen und verwalten"
 icon: "database"
 ---
 
-Datenquellen sind die Grundlage fuer Dashboards und KI-Berichte. Sie koennen Finanzdaten als Datei hochladen oder – als Super-Administrator – per DATEV-Schnittstelle automatisch abrufen.
+Datenquellen sind die Grundlage für Dashboards und KI-Berichte. Sie können Finanzdaten als Datei hochladen oder – als Super-Administrator – per DATEV-Schnittstelle automatisch abrufen.
 
 ## Datei hochladen
 
 1. Klicken Sie in der Seitenleiste auf "Datenquellen"
-2. Waehlen Sie ein Unternehmen aus der Dropdown-Liste
-3. Waehlen Sie die Buchhaltungsquelle: DATEV, BMD oder Andere
-4. Ziehen Sie die Datei per Drag-and-Drop in das Upload-Feld oder klicken Sie, um eine Datei auszuwaehlen
-5. Unterstuetzte Formate: CSV, XLSX, XLS
+2. Wählen Sie ein Unternehmen aus der Dropdown-Liste
+3. Wählen Sie die Buchhaltungsquelle: DATEV MVZ Export, BMD Export oder Sonstige
+4. Ziehen Sie die Datei per Drag-and-Drop in das Upload-Feld oder klicken Sie, um eine Datei auszuwählen
+5. Unterstützte Formate: CSV, XLSX, XLS, XML, TXT
 
 ### DATEV-Dateien automatisch verarbeiten
 
-Wenn Sie als Buchhaltungsquelle "DATEV" auswaehlen, wird die hochgeladene CSV-Datei automatisch verarbeitet:
+Wenn Sie als Buchhaltungsquelle "DATEV MVZ Export" auswählen, wird die hochgeladene CSV-Datei automatisch verarbeitet:
 
 - Die DATEV-CSV wird in eine strukturierte Excel-Datei umgewandelt
 - Ein Fortschrittsbalken zeigt den Verarbeitungsfortschritt an
-- Die verarbeitete Datei steht anschliessend fuer Dashboards und Berichte zur Verfuegung
+- Die verarbeitete Datei steht anschließend für Dashboards und Berichte zur Verfügung
 
 ## Datenquellen ansehen
 
-Unter dem Upload-Bereich sehen Sie eine Liste aller Datenquellen des ausgewaehlten Unternehmens. Diese Liste enthaelt sowohl hochgeladene Dateien als auch per DATEV-Schnittstelle abgerufene Daten.
+Unter dem Upload-Bereich sehen Sie eine Liste aller Datenquellen des ausgewählten Unternehmens. Diese Liste enthält sowohl hochgeladene Dateien als auch per DATEV-Schnittstelle abgerufene Daten.
 
 ## Datei herunterladen
 
@@ -33,18 +33,21 @@ Klicken Sie auf das Download-Symbol neben einer Datei, um sie herunterzuladen.
 
 ## Datei ersetzen
 
-Wenn Sie eine Datei durch eine neuere Version ersetzen moechten:
+Wenn Sie eine Datei durch eine neuere Version ersetzen möchten:
 
 1. Klicken Sie auf das Ersetzen-Symbol
-2. Eine Warnung zeigt an, welche Berichte auf diese Datei zugreifen und betroffen sein koennten
-3. Laden Sie die neue Datei hoch
-4. Die alte Datei wird ersetzt
+2. Eine Warnung zeigt an, welche Berichte auf diese Datei zugreifen und betroffen sind
+3. Wählen Sie das Buchhaltungssystem aus
+4. Klicken Sie auf "Neue Datei prüfen"
+5. Wenn die neue Datei kompatibel ist, können Sie diese mit Klick auf "Datenquelle ersetzen" hochladen
+6. Die alte Datei wird ersetzt
 
-## Datei loeschen
+## Datei löschen
 
-1. Klicken Sie auf das Loesch-Symbol neben einer Datei
-2. Bestaetigen Sie die Loeschung
+1. Klicken Sie auf das Lösch-Symbol neben einer Datei
+2. Sie erhalten eine Information, welche Berichte diese Datenquelle nutzen
+3. Bestätigen Sie die Löschung
 
 ## DATEV-Schnittstelle
 
-Super-Administratoren koennen die DATEV-API-Schnittstelle nutzen, um Finanzdaten automatisch abzurufen, ohne Dateien manuell hochzuladen. Details dazu finden Sie auf der Seite [DATEV-Integration](/finanzdash-datev).
+Super-Administratoren können die DATEV-API-Schnittstelle nutzen, um Finanzdaten automatisch abzurufen, ohne Dateien manuell hochzuladen. Details dazu finden Sie auf der Seite [DATEV-Integration](/finanzdash-datev).

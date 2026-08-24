@@ -5,57 +5,30 @@ description: "Benutzer einladen, Rollen vergeben und Zugriffe steuern"
 icon: "users"
 ---
 
-Als Administrator verwalten Sie alle Benutzer von FinanzDash. Sie koennen neue Benutzer einladen, Rollen aendern und Benutzer loeschen.
+Als Administrator verwalten Sie alle Benutzer von FinanzDash, die Ihrer Kanzlei zugeordnet sind. Sie können neue Benutzer einladen, Rollen ändern und Benutzer löschen.
 
 ## Benutzer ansehen
 
 1. Klicken Sie in der Seitenleiste auf "Benutzer"
 2. Sie sehen alle Benutzer mit Name, E-Mail, Rolle und letzter Anmeldung
 3. Nutzen Sie die Suchleiste, um nach Name oder E-Mail zu filtern
-4. Die Rolle wird farbig markiert: Super-Admin (Krone, gold), Administrator (Schild, tuerkis), Benutzer (kein Symbol)
 
 ## Benutzer einladen
 
-1. Klicken Sie auf "Benutzer hinzufuegen"
-2. Fuellen Sie das Formular aus:
-   - **Name** – Vollstaendiger Name des Benutzers
+1. Klicken Sie auf "Benutzer hinzufügen"
+2. Füllen Sie das Formular aus:
+   - **Vorname** – Vollständiger Vorname des Benutzers
+   - **Nachname** - Vollständiger Nachname des Benutzers
    - **E-Mail** – Die E-Mail-Adresse, an die die Einladung gesendet wird
-   - **Rolle** – Administrator oder Benutzer (Mandant)
-3. Klicken Sie auf "Speichern"
+   - **Kanzlei** – Ordnen Sie den Benutzer einer Kanzlei zu
+3. Klicken Sie auf "Einladung senden"
 
-Der neue Benutzer erhaelt eine Willkommens-E-Mail mit einem Link zum Einrichten seines Passworts. Nach dem Einrichten des Passworts kann er sich anmelden.
+Der neue Benutzer erhält eine Willkommens-E-Mail mit einem Link zum Einrichten seines Passworts. Nach dem Einrichten des Passworts kann er sich anmelden.
 
-## Benutzer bearbeiten
+## Benutzer löschen
 
-1. Klicken Sie auf das Bearbeiten-Symbol eines Benutzers
-2. Sie koennen den Namen und die Rolle aendern
-3. Speichern Sie die Aenderungen
+1. Klicken Sie auf das Lösch-Symbol eines Benutzers
+2. Es wird eine Auswirkungsanalyse angezeigt, die zeigt, welche Daten diesem Benutzer gehören (Dashboards, Berichte etc.)
+3. Bestätigen Sie die Löschung durch klicken auf "Benutzer löschen"
 
-## Benutzer loeschen
-
-1. Klicken Sie auf das Loesch-Symbol eines Benutzers
-2. Es wird eine Auswirkungsanalyse angezeigt, die zeigt, welche Daten diesem Benutzer gehoeren (Dashboards, Berichte etc.)
-3. Bestaetigen Sie die Loeschung
-
-Nur Super-Administratoren koennen andere Benutzer loeschen. Super-Administratoren koennen nicht geloescht werden, solange sie Super-Admin sind.
-
-## Super-Administrator verwalten
-
-Nur Super-Administratoren koennen andere zu Super-Administratoren befördern oder herabstufen:
-
-1. Oeffnen Sie die Super-Admin-Verwaltung
-2. Waehlen Sie einen Administrator aus
-3. Klicken Sie auf "Befoerdern" oder "Herabstufen"
-
-## Passwort eines Benutzers zuruecksetzen
-
-Als Administrator koennen Sie das Passwort eines Benutzers zuruecksetzen:
-
-1. Klicken Sie bei einem Benutzer auf "Passwort zuruecksetzen"
-2. Der Benutzer erhaelt eine E-Mail mit einem Link zum Neusetzen seines Passworts
-
-## Kanzlei-Zuordnung
-
-Administratoren koennen auf bestimmte Kanzleien beschraenkt werden. Wenn ein Administrator nur bestimmten Kanzleien zugewiesen ist, sieht er nur deren Unternehmen und Benutzer.
-
-Mandantenbenutzer werden einer Kanzlei zugeordnet, damit die richtigen Dashboards fuer sie freigegeben werden koennen.
+Nur Super-Administratoren können andere Benutzer löschen. Super-Administratoren können nicht gelöscht werden, solange sie Super-Admin sind.

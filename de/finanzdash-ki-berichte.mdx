@@ -1,91 +1,111 @@
 ---
 title: "KI-Berichte"
 sidebarTitle: "KI-Berichte"
-description: "Finanzberichte mit KI erstellen und veroeffentlichen"
+description: "Finanzberichte mit KI erstellen und veröffentlichen"
 icon: "sparkles"
 ---
 
-Mit FinanzDash koennen Sie KI-generierte Finanzberichte erstellen. Die KI analysiert Ihre hochgeladenen Finanzdaten und erstellt daraus einen strukturierten Bericht mit Text und Diagrammen.
+Mit FinanzDash können Sie KI-generierte Finanzberichte erstellen. Die KI analysiert Ihre hochgeladenen Finanzdaten und erstellt daraus einen strukturierten Bericht mit Text und Diagrammen.
 
 ## Voraussetzungen
 
-Um KI-Berichte zu erstellen, benoetigen Sie:
+Um KI-Berichte zu erstellen, benötigen Sie:
 
 - Die Rolle **Administrator** (oder Super-Administrator)
-- Freischaltung durch den Super-Administrator (die Berichtsfunktion muss fuer Sie aktiviert sein)
-- Mindestens eine hochgeladene Datendatei
+- Freischaltung durch den Super-Administrator (die Berichtsfunktion muss für Sie aktiviert sein)
+- Mindestens eine hochgeladene Datenquelle
+
+## Mandantenbenutzer
+
+Mandantenbenutzer können von Administratoren erstellte Berichte über das Dashboard Ihres zugewiesenen Unternehmens ansehen und dabei für die Ansicht aus 5 verschiedenen Diagrammtypen und Farbschemata wählen, den Diagrammtitel ändern, sowie die Legende ein- bzw. ausblenden. Mandantenbenutzer sehen auch den Prompt, der zur Erstellung des Berichts verwendet wurde und können zwischen Diagramm- und Tabellenansicht wechseln.
 
 ## Bericht erstellen
 
 1. Klicken Sie in der Seitenleiste auf "Berichte"
 2. Klicken Sie auf "Neuer Bericht"
-3. Der Berichts-Editor oeffnet sich:
-   - **Prompt** – Beschreiben Sie, was der Bericht enthalten soll (z.B. "Erstelle eine GuV-Analyse mit Vergleich zum Vorjahr")
-   - **Hauptdatendatei** – Waehlen Sie die primaere Datendatei aus
-   - **Zusaetzliche Dateien** – Optional koennen Sie weitere Dateien hinzufuegen
-4. Klicken Sie auf "Generieren"
+3. Der Berichts-Editor öffnet sich:
+   - **Berichtsname** - vergeben Sie einen sprechenden Berichtsnamen
+   - **Unternehmen** - Wählen Sie ein Unternehmen aus
+   - **Ausgewählte Datenquellen** – Wählen Sie die primäre Datenquelle aus
+   - **Zusätzliche Dateien** – Optional können Sie bis zu 4 weitere Datenquellen hinzufügen
+   - **Datenquellenvorschau** - Nach Auswahl von mind. 1 Datenquelle erscheint darunter eine Vorschau über den Inhalt der jeweiligen Datenquelle
+   - **Prompt** – Beschreiben Sie, was der Bericht enthalten soll (z.B. "Erstelle einen Umsatzbericht pro Quartal in einem Balkendiagramm")
+4. Klicken Sie auf "Bericht erstellen"
 
 Die KI analysiert die Daten und erstellt einen Bericht. Dieser Vorgang kann einige Sekunden dauern.
 
 ## Token-Verbrauch
 
-Jede Berichtsgenerierung verbraucht Token. Oben in der Berichts-Ansicht sehen Sie einen Balken, der Ihren monatlichen Verbrauch im Verhaeltnis zu Ihrem Kontingent anzeigt.
+Jede Berichtsgenerierung verbraucht Token. Oben in der Berichts-Ansicht sehen Sie einen Balken, der Ihren monatlichen Verbrauch im Verhältnis zu Ihrem Kontingent anzeigt. Darunter wird das aktuell verwendet KI-Modell angezeigt.
 
 Die Token-Kontingente werden in Stufen vergeben:
 
-- **Starter** – Kleines Kontingent fuer gelegentliche Berichte
-- **Standard** – Mittleres Kontingent
-- **Professional** – Grosses Kontingent fuer haeufige Nutzung
-- **Individuell** – Vom Super-Administrator festgelegt
+- **Starter** – 500.000 Token für gelegentliche Nutzung
+- **Standard** – 1.500.000 Token für regelmäßige Nutzung
+- **Professional** – 4.500.000 Token für intensive Nutzung
 
-## Bericht ansehen und bearbeiten
+## Bericht fertig stellen
 
-Nach der Generierung erscheint der Bericht als Entwurf. Sie koennen:
+Nach der Generierung erscheint der Bericht als Entwurf. Sie erhalten ein Diagramm und einen Bericht in Form einer Management Zusammenfassung
 
-- **Vorschau** – Den Bericht in der Vorschau ansehen
-- **Bearbeiten** – Den Prompt oder die Daten anpassen und neu generieren
-- **Diagramme** – Der Bericht kann Diagramme enthalten (Balken-, Torten- und Liniendiagramme)
+Sie können:
 
-## Bericht veroeffentlichen
+- **Ansehen** – Der Bericht wird vom Entwurf zum fertigen Bericht
+- **Verfeinern** – Den Prompt oder die Daten anpassen und den Bericht neu generieren
 
-1. Klicken Sie im Bericht auf "Veroeffentlichen"
-2. Waehlen Sie die Unternehmen aus, fuer die der Bericht sichtbar sein soll
-3. Bestaetigen Sie die Veroeffentlichung
+Nachdem Sie auf "Ansehen" geklickt haben, erscheint der fertige Bericht mit folgenden Komponenten:
 
-Veroeffentlichte Berichte koennen von den zugewiesenen Unternehmen eingesehen werden.
+- **Prompt** - Durch klicken auf "Prompt" sehen Sie den verwenden Prompt nochmals
+- **Management Zusammenfassung** - Beschreibung des Inhaltes und Ergebnisses des Berichts in kurzer prägnanter Form
+- **Diagramm** - das Ergebnis des Berichts als Diagramm dargestellt (es stehen 5 verschiedene Diagrammtypen zur Auswahl)
+- **Bericht** - Von der Diagramm Ansicht kann in eine Tabellen Ansicht gewechselt werden
+- **Diagramm anpassen** - Sie können das Farbschema des Diagramms ändern (es stehen 5 Schemata zur Verfügung), den Berichtstitel ändern und die Legende ein-bzw. ausblenden
+
+## Bericht veröffentlichen
+
+1. Klicken Sie im fertigen Bericht rechts oben oder später in der Berichtsliste auf "Veröffentlichen"
+2. Wählen Sie das Unternehmen aus, für welches der Bericht sichtbar sein soll
+3. Bestätigen Sie die Veröffentlichung durch klicken auf "Speichern"
+
+Veröffentlichte Berichte können von dem Unternehmen zugewiesenen Mandantenbenutzern angesehen werden.
 
 ## Berichte filtern und suchen
 
-In der Berichtsliste koennen Sie:
+In der Berichtsliste können Sie:
 
 - Zwischen Karten- und Listenansicht wechseln
-- Nach Titel suchen
+- Nach Berichtsnamen oder Benutzer suchen
 - Filtern nach "Alle" oder "Meine Berichte"
-- Nach Spalten sortieren
+- In der Listenansicht nach Spalten sortieren
 
-## Bericht loeschen
+## Bericht bearbeiten
 
-1. Klicken Sie auf das Loesch-Symbol eines Berichts
-2. Bestaetigen Sie die Loeschung
+1. Klicken Sie auf das Bearbeiten-Symbol eines Berichts in der Karten- oder Listenansicht
+2. Wählen Sie die Datenquellen aus
+3. Klicken Sie auf "Bericht erstellen"
+
+## Bericht löschen
+
+1. Klicken Sie auf das Lösch-Symbol eines Berichts
+2. Bestätigen Sie durch klicken auf "Löschen"
 
 ## KI-Einstellungen (nur Super-Administrator)
 
-Nur der Super-Administrator, der die KI konfiguriert hat, kann die Einstellungen aendern:
+Nur der Super-Administrator, der die KI konfiguriert hat, kann die Einstellungen ändern:
 
 1. Klicken Sie in der Berichts-Ansicht auf "Einstellungen"
-2. Waehlen Sie den KI-Anbieter: OpenAI, Anthropic (Claude) oder Google (Gemini)
-3. Geben Sie den API-Schluessel ein
-4. Waehlen Sie das Modell
+2. Wählen Sie den KI-Anbieter: wie z.B. OpenAI, Anthropic (Claude) oder Google (Gemini)
+3. Geben Sie den API-Schlüssel ein
+4. Wählen Sie das Modell
 5. Speichern Sie die Einstellungen
 
-Der API-Schluessel wird verschluesselt gespeichert. Andere Administratoren sehen nur den Anbieter und das Modell, nicht den Schluessel.
+Der API-Schlüssel wird verschlüsselt gespeichert. Andere Administratoren sehen nur den Anbieter und das Modell, nicht den Schlüssel.
 
 ## Berichtszugang verwalten (Super-Administrator)
 
-Der Super-Administrator kann fuer jeden Administrator festlegen:
+Der Super-Administrator kann für jeden Administrator festlegen:
 
 - Ob die Berichtsfunktion aktiviert oder deaktiviert ist
 - Welches Token-Kontingent (Stufe) zugewiesen ist
-- Bei der Stufe "Individuell" ein benutzerdefiniertes Limit
 
-Zusaetzlich gibt es ein Admin-Dashboard, das eine Uebersicht ueber alle Berichte und die Token-Nutzung bietet.
+Zusätzlich gibt es ein Admin-Dashboard, das dem Super-Administrator eine Übersicht über alle Berichte und die Token-Nutzung bietet.
