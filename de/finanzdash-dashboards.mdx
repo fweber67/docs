@@ -14,9 +14,9 @@ Dashboards sind das Herzstück von FinanzDash. Sie zeigen Finanzkennzahlen, Diag
 3. Für das ausgewählte Unternehmen werden alle verfügbaren Dashboards angezeigt
 4. Klicken Sie auf ein Dashboard, um dessen Widgets zu sehen
 
-## Bericht-Typen
+## Berichts-Typen
 
-Ein Dashboard kann mehrere Widget-Typen enthalten:
+Ein Dashboard kann mehrere Berichts-Typen enthalten, welche standardmäßig vorgegeben sind:
 
 - **KPI-Dashboard** – Kennzahlen wie Umsatz, EBITDA als Kacheln
 - **GuV-Dashboard** – Gewinn- und Verlustrechnung mit Vergleich zum Vorjahr
@@ -24,6 +24,31 @@ Ein Dashboard kann mehrere Widget-Typen enthalten:
 - **Working Capital** – Chart zum Working Capital und dessen Entwicklung
 - **Jahresvergleich** – Monatlicher Jahresvergleich der einzelnen GuV Kategorien
 - **Monatlicher Trendbericht** - Monatlicher Trendbericht der einzelnen GuV Kategorien
+
+## Aufbau der standardmäßige vorgegeben Berichts-Typen
+
+### **Kontenauswahl nach Kategorie**
+
+| **Kategorie** | **Ausgewählte Konten** | **Logik** |
+| :-- | :-- | :-- |
+| **Umsatz** | Alle Konten beginnend mit `4` | Summe aller `4xxx`-Konten |
+| **Direkte Kosten** | Alle Konten beginnend mit `5` | Summe aller `5xxx`-Konten |
+| **Rohertrag** | — | Umsatz minus direkte Kosten |
+| **Personalkosten** | Alle Konten beginnend mit `6` | Summe aller `6xxx`-Konten |
+| **Sonstige Aufwendungen** | Alle Konten beginnend mit `7`, **ausgenommen Konto** `7736` | Summe `7xxx` minus Abschreibungen |
+| **Abschreibungen** | Nur Konto `7736` | Einzelnes spezifisches Konto |
+| **Finanzaufwendungen** | Alle Konten beginnend mit `8`, **ausgenommen Konto** `8500` | Summe `8xxx` minus Steuern |
+| **Steuern** | Nur Konto `8500` | Einzelnes spezifisches Konto |
+
+### **Wie Zwischensummen berechnet werden**
+
+- **Rohertrag** = Umsatz − Direkte Kosten
+- **EBITDA** = Rohertrag − Personalkosten − Sonstige Aufwendungen
+- **EBIT** = EBITDA − Abschreibungen (Konto 7736)
+- **EBT** (Ergebnis vor Steuern) = EBIT − Finanzaufwendungen
+- **Jahresüberschuss nach Steuern** = EBT − Steuern (Konto 8500)
+
+Konto `7736` (Abschreibungen) wird **aus** den "Sonstigen Aufwendungen" (der `7`er-Reihe) herausgezogen, sodass EBITDA keine Abschreibungen enthält, und Konto `8500` (Steuern) wird aus den "Finanzaufwendungen" (der `8`er-Reihe) herausgezogen, sodass EBT vor Steuern berechnet wird. Jede Zeile zeigt sowohl Monatswerte (MTD) als auch Jahreswerte (YTD) mit Vergleich zum Vorjahr.
 
 ## Dashboard erstellen (Administrator)
 
@@ -38,7 +63,7 @@ Ein Dashboard kann mehrere Widget-Typen enthalten:
 1. Öffnen Sie ein Dashboard
 2. Klicken Sie auf "Bericht hinzufügen"
 3. Vergeben Sie einen Berichtsnamen
-4. Wählen Sie einen Bericht-Typ 
+4. Wählen Sie einen Bericht-Typ
 5. Wählen Sie die hochgeladene(n) Datei(en) als Datenquelle(n) für diesen Bericht
 6. Klicken Sie auf "Bericht erstellen"
 
