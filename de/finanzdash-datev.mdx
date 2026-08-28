@@ -5,43 +5,44 @@ description: "DATEV-Schnittstelle einrichten und nutzen"
 icon: "plug"
 ---
 
-Die DATEV-Integration ermöglicht es Super-Administratoren, Finanzdaten automatisch über die DATEV-API abzurufen, ohne Dateien manuell hochzuladen.
+Die DATEV-Integration ermöglicht es Administratoren, Finanzdaten automatisch über die DATEV-API abzurufen, ohne Dateien manuell hochzuladen.
 
 ## Voraussetzungen
 
-- Sie benötigen die Rolle **Super-Administrator**
-- Für das Unternehmen muss die DATEV-Mandantennummer hinterlegt sein (siehe [Unternehmen verwalten](/finanzdash-unternehmen))
+- Sie benötigen die Rolle **Administrator** in FinanzDash.
+- Für die Unternehmen muss die DATEV-Mandantennummer in FinanzDash hinterlegt sein (siehe [Unternehmen verwalten](/finanzdash-unternehmen))
+- **Festschreibung im Rechnungswesen:** Die Saldenlisten können über die DATEV-API nur dann abgerufen werden, wenn die Buchungsstapel in DATEV für den gewünschten Zeitraum bereits **festgeschrieben** (archiviert) und ins Rechenzentrum gesendet wurden. Provisorische ("ungefestigte") Buchungen werden nicht übernommen.
+- **Vertrag & Rechte:** Im DATEV-Shop muss der "**DATEV Datenservice Export Rechnungswesen**" gebucht sein und in der _DATEV Rechteverwaltung online_ muss der FinanzDash App mit der **Client-ID 213a4913b22e660d136375b2d4876105** explizit der Zugriff auf die entsprechende Berater-/Mandantennummer erlaubt werden.
 
 ## DATEV verbinden
 
 1. Klicken Sie in der Seitenleiste auf "Datenquellen"
-2. Wählen Sie ein Unternehmen aus
-3. Klicken Sie auf "DATEV verbinden"
-4. Ein neues Fenster öffnet sich mit der DATEV-Anmeldeseite
-5. Melden Sie sich mit Ihren DATEV-Zugangsdaten an
-6. Erteilen Sie die Berechtigung für FinanzDash
-7. Das Fenster schließt sich automatisch und die Verbindung wird hergestellt
+2. Klicken Sie auf "DATEV-Konto verbinden"
+3. Ein neues Fenster öffnet sich mit der DATEV-Anmeldeseite
+4. Melden Sie sich mit Ihren DATEV-Zugangsdaten an
+5. Erteilen Sie die Berechtigung für FinanzDash
+6. Das Fenster schließt sich automatisch und die Verbindung wird hergestellt
 
 Nach erfolgreicher Verbindung wird der Verbindungsstatus als "Verbunden" angezeigt.
 
 ## Summen- und Saldenliste abrufen
 
-Nachdem die DATEV-Verbindung hergestellt wurde, können Sie die Summen- und Saldenliste (SuSa) abrufen:
+Nachdem die DATEV-Verbindung hergestellt wurde, können Sie die Summen- und Saldenliste (SuSa) für alle Ihre Mandanten (Unternehmen) abrufen:
 
-1. Klicken Sie auf "SuSa abrufen"
-2. FinanzDash ruft die Daten für das aktuelle und das vorherige Wirtschaftsjahr ab
-3. Die abgerufenen Daten erscheinen in der Datenquellen-Liste
-4. Die Daten stehen sofort für Dashboards und KI-Berichte zur Verfügung
-
-## DATEV-Mandantenliste
-
-Über die DATEV-Schnittstelle können Sie auch die Liste Ihrer DATEV-Mandanten abrufen. Dies hilft dabei, die richtigen Unternehmen in FinanzDash anzulegen.
+1. Klicken Sie in der Seitenleiste auf "Datenquellen"
+2. Wählen Sie das entsprechende Unternehmen aus der Liste aus
+3. Klicken Sie auf "SuSa-Daten abrufen"
+4. FinanzDash ruft die Daten für das aktuelle und das vorherige Wirtschaftsjahr ab
+5. Die abgerufenen Daten erscheinen in der Datenquellen-Liste des ausgewählten Unternehmens
+6. Die Daten stehen sofort für Dashboards und KI-Berichte zur Verfügung
 
 ## Verbindung trennen
 
-1. Klicken Sie auf "Trennen"
-2. Die DATEV-Verbindung wird getrennt
-3. Bereits abgerufene Daten bleiben erhalten
+1. Klicken Sie in der Seitenleiste auf "Datenquellen"
+2. Klicken Sie auf "Trennen"
+3. Bestätigen Sie mit "OK"
+4. Die DATEV-Verbindung wird getrennt
+5. Bereits abgerufene Daten bleiben erhalten
 
 Sie können die Verbindung jederzeit wiederherstellen.
 
@@ -50,4 +51,3 @@ Sie können die Verbindung jederzeit wiederherstellen.
 - Die DATEV-Zugriffstoken werden verschlüsselt gespeichert
 - Alle API-Aufrufe werden in einem Audit-Protokoll aufgezeichnet (mit Zeitstempel, Dauer und Status)
 - Die Tokens werden automatisch aktualisiert, wenn sie ablaufen
-- Nur Super-Administratoren können die DATEV-Schnittstelle nutzen
