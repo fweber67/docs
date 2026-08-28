@@ -5,43 +5,44 @@ description: "Set up and use the DATEV interface"
 icon: "plug"
 ---
 
-The DATEV integration allows super administrators to automatically retrieve financial data via the DATEV API, without uploading files manually.
+The DATEV integration allows administrators to automatically retrieve financial data via the DATEV API, without uploading files manually.
 
 ## Prerequisites
 
-- You need the **super administrator** role
-- The DATEV client number must be set for the company (see [Manage companies](/finanzdash-unternehmen))
+- You need the **administrator** role in FinanzDash.
+- The DATEV client number must be set in FinanzDash for the companies (see [Manage companies](/finanzdash-unternehmen))
+- **Finalization in accounting:** The trial balances can only be retrieved via the DATEV API if the posting batches in DATEV have already been **finalized** (archived) for the desired period and sent to the data center. Provisional ("unfinalized") postings are not transferred.
+- **Contract & permissions:** The "**DATEV Datenservice Export Rechnungswesen**" must be booked in the DATEV Shop, and in _DATEV Rechteverwaltung online_ the FinanzDash app with the **client ID 213a4913b22e660d136375b2d4876105** must be explicitly granted access to the corresponding consultant/client number.
 
 ## Connect DATEV
 
 1. Click "Data sources" in the sidebar
-2. Select a company
-3. Click "Connect DATEV"
-4. A new window opens with the DATEV sign-in page
-5. Sign in with your DATEV credentials
-6. Grant permission for FinanzDash
-7. The window closes automatically and the connection is established
+2. Click "Connect DATEV account"
+3. A new window opens with the DATEV sign-in page
+4. Sign in with your DATEV credentials
+5. Grant permission for FinanzDash
+6. The window closes automatically and the connection is established
 
 Once the connection is successful, the connection status is shown as "Connected".
 
 ## Retrieve the trial balance
 
-After the DATEV connection has been established, you can retrieve the trial balance (SuSa):
+After the DATEV connection has been established, you can retrieve the trial balance (SuSa) for all your clients (companies):
 
-1. Click "Retrieve SuSa"
-2. FinanzDash retrieves the data for the current and previous fiscal year
-3. The retrieved data appears in the data sources list
-4. The data is immediately available for dashboards and AI reports
-
-## DATEV client list
-
-You can also retrieve the list of your DATEV clients via the DATEV interface. This helps you create the correct companies in FinanzDash.
+1. Click "Data sources" in the sidebar
+2. Select the corresponding company from the list
+3. Click "Retrieve SuSa data"
+4. FinanzDash retrieves the data for the current and previous fiscal year
+5. The retrieved data appears in the data sources list of the selected company
+6. The data is immediately available for dashboards and AI reports
 
 ## Disconnect
 
-1. Click "Disconnect"
-2. The DATEV connection is closed
-3. Data that has already been retrieved is kept
+1. Click "Data sources" in the sidebar
+2. Click "Disconnect"
+3. Confirm with "OK"
+4. The DATEV connection is closed
+5. Data that has already been retrieved is kept
 
 You can reconnect at any time.
 
@@ -50,4 +51,3 @@ You can reconnect at any time.
 - The DATEV access tokens are stored encrypted
 - All API calls are recorded in an audit log (with timestamp, duration, and status)
 - Tokens are refreshed automatically when they expire
-- Only super administrators can use the DATEV interface
