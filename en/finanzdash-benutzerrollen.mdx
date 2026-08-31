@@ -7,19 +7,15 @@ icon: "shield"
 
 FinanzDash distinguishes three user roles with different permissions. Your role determines which menu items and features you see.
 
-## Super administrator
+## Client user
 
-The super administrator has the most extensive rights. They can do everything an administrator can, plus:
+Users with the "client user" role have read-only access. They can:
 
-- Manage other users (promote and demote)
-- Configure AI models (API key, model)
-- Enable and disable AI report access for administrators
-- Assign token quotas (Starter, Standard, Professional, Custom)
-- Connect and use the DATEV account
-- View and filter all firms
-- Assign companies to multiple users at once
+- View dashboards for companies assigned to them
+- View published reports
+- Switch between assigned companies
 
-Super administrators are marked with a crown icon (gold).
+They cannot manage companies, users, data, or reports. In the sidebar, they only see the "Dashboards" menu item.
 
 ## Administrator
 
@@ -33,19 +29,23 @@ Administrators are firm employees who manage data and users. They can:
 - Create and publish AI reports (if enabled by the super administrator)
 - Assign reports to companies
 
-Administrators are limited to the scope of the firm(s) they are assigned to. They only see companies and users of those firms.
+Administrators are limited to the scope of the firm(s) they are assigned to. They then only see companies and users of those firm(s).
 
 Administrators are marked with a shield icon (turquoise).
 
-## Client user
+## Super administrator
 
-Users with the "client user" role have read-only access. They can:
+The super administrator has the most extensive rights. They can do everything an administrator can, plus:
 
-- View dashboards for companies assigned to them
-- View published reports
-- Switch between assigned companies
+- Manage other users (promote and demote)
+- Configure AI models (API key, model)
+- Enable and disable AI report access for administrators
+- Assign token quotas (Starter, Standard, Professional, Custom)
+- Connect and use the DATEV account
+- View and filter all firms
+- Assign companies to multiple users at once
 
-They cannot manage companies, users, data, or reports. In the sidebar, they only see the "Dashboards" menu item.
+Super administrators are marked with a crown icon (gold).
 
 ## Role overview
 
