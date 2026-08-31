@@ -12,10 +12,10 @@ FinanzDash distinguishes three user roles with different permissions. Your role 
 The super administrator has the most extensive rights. They can do everything an administrator can, plus:
 
 - Manage other users (promote and demote)
-- Configure the AI provider (API key, model)
+- Configure AI models (API key, model)
 - Enable and disable AI report access for administrators
 - Assign token quotas (Starter, Standard, Professional, Custom)
-- Set up and use the DATEV interface
+- Connect and use the DATEV account
 - View and filter all firms
 - Assign companies to multiple users at once
 
@@ -26,9 +26,10 @@ Super administrators are marked with a crown icon (gold).
 Administrators are firm employees who manage data and users. They can:
 
 - Create, edit, and delete companies
-- Invite, edit, and delete users
+- Invite and delete users
 - Upload, replace, and delete financial data
-- Create and edit dashboards and widgets
+- Connect and use the DATEV account
+- Create and edit dashboards and reports
 - Create and publish AI reports (if enabled by the super administrator)
 - Assign reports to companies
 
@@ -41,6 +42,7 @@ Administrators are marked with a shield icon (turquoise).
 Users with the "client user" role have read-only access. They can:
 
 - View dashboards for companies assigned to them
+- View published reports
 - Switch between assigned companies
 
 They cannot manage companies, users, data, or reports. In the sidebar, they only see the "Dashboards" menu item.
@@ -56,5 +58,5 @@ They cannot manage companies, users, data, or reports. In the sidebar, they only
 | Edit dashboards | Yes | Yes | No |
 | Create AI reports | Yes | Yes (if enabled) | No |
 | Change AI settings | Yes | No | No |
-| DATEV interface | Yes | No | No |
-| Manage super admins | Yes | No | No |
+| DATEV interface | Yes | Yes | No |
+| Manage administrators | Yes | No | No |
