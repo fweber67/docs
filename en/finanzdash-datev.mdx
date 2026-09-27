@@ -5,14 +5,14 @@ description: "Set up and use the DATEV interface"
 icon: "plug"
 ---
 
-The DATEV integration allows administrators to automatically retrieve financial data via the DATEV API, without uploading files manually.
+The DATEV integration allows administrators to automatically retrieve financial data via the DATEV API without manually uploading files.
 
 ## Prerequisites
 
 - You need the **administrator** role in FinanzDash.
-- The DATEV client number must be set in FinanzDash for the companies (see [Manage companies](/en/finanzdash-unternehmen))
-- **Finalization in accounting:** The trial balances can only be retrieved via the DATEV API if the posting batches in DATEV have already been **finalized** (archived) for the desired period and sent to the data center. Provisional ("unfinalized") postings are not transferred.
-- **Contract & permissions:** The "**DATEV Datenservice Export Rechnungswesen**" must be booked in the DATEV Shop, and in _DATEV Rechteverwaltung online_ the FinanzDash app with the **client ID 213a4913b22e660d136375b2d4876105** must be explicitly granted access to the corresponding consultant/client number.
+- The DATEV client number must be stored in FinanzDash for the companies (see [Manage companies](/en/finanzdash-unternehmen)).
+- **Finalization in accounting:** Trial balances can only be retrieved via the DATEV API if the posting batches in DATEV for the selected period have already been **finalized** (archived) and sent to the data center. Provisional ("unfinalized") postings are not transferred.
+- **Contract & permissions:** The "**DATEV Datenservice Export Rechnungswesen**" must be booked in the DATEV Shop, and in _DATEV Rechteverwaltung online_ the FinanzDash app with the **client ID 213a4993b22e660d136375b2d4876105** must be explicitly granted access to the corresponding consultant/client number.
 
 ## Connect DATEV
 
@@ -20,36 +20,42 @@ The DATEV integration allows administrators to automatically retrieve financial 
 2. Click "Connect DATEV account"
 3. A new window opens with the DATEV sign-in page
 4. Sign in with your DATEV credentials
-5. Grant permission for FinanzDash
+5. Grant permission to FinanzDash
 6. The window closes automatically and the connection is established
 
-Once the connection is successful, the connection status is shown as "Connected".
+After the connection is successful, the connection status is shown as "Connected".
 
-## Retrieve the trial balance
+## Retrieve the trial balance for each client
 
-After the DATEV connection has been established, you can retrieve the trial balance (SuSa) for all your clients (companies):
+Once the DATEV connection is established, you can retrieve the trial balance (SuSa) for your clients (companies):
 
 1. Click "Data sources" in the sidebar
 2. Select the corresponding company from the list
 3. Click "Retrieve SuSa data"
 4. Select the fiscal years you want to import
 5. Click "Retrieve data"
-6. The retrieved data appears in the data sources list of the selected company, with the fiscal year in the file name
+6. The retrieved data appears in the data source list for the selected company with the fiscal year in the file name
 7. The data is immediately available for dashboards and AI reports
+
+If this data source already exists, it will be replaced by the newly retrieved data source. You can achieve the same result by clicking the refresh symbol on the right side of the data source.
+
+## Retrieve the trial balance for all clients
+
+Click "Synchronize all companies" to retrieve the latest SuSa data from DATEV for all available fiscal years for all companies assigned to the user that have a valid client number and are exported as Excel data in the data source list.
 
 ## Disconnect
 
 1. Click "Data sources" in the sidebar
 2. Click "Disconnect"
 3. Confirm with "OK"
-4. The DATEV connection is closed
-5. Data that has already been retrieved is kept
+4. The DATEV connection is disconnected
+5. Previously retrieved data remains available
 
 You can reconnect at any time.
 
 ## Security
 
-- The DATEV access tokens are stored encrypted
-- All API calls are recorded in an audit log (with timestamp, duration, and status)
-- Tokens are refreshed automatically when they expire
-- If inactivity continues, you are signed out of your DATEV account automatically for security reasons.
+- DATEV access tokens are stored encrypted
+- All API calls are logged in an audit log (with timestamp, duration, and status)
+- Tokens are automatically refreshed when they expire
+- If there is continued inactivity, you are automatically signed out of your DATEV account for security reasons.
