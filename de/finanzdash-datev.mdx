@@ -25,9 +25,9 @@ Die DATEV-Integration ermöglicht es Administratoren, Finanzdaten automatisch ü
 
 Nach erfolgreicher Verbindung wird der Verbindungsstatus als "Verbunden" angezeigt.
 
-## Summen- und Saldenliste abrufen
+## Summen- und Saldenliste pro Mandant abrufen
 
-Nachdem die DATEV-Verbindung hergestellt wurde, können Sie die Summen- und Saldenliste (SuSa) für alle Ihre Mandanten (Unternehmen) abrufen:
+Nachdem die DATEV-Verbindung hergestellt wurde, können Sie die Summen- und Saldenliste (SuSa) für Ihre Mandanten (Unternehmen) abrufen:
 
 1. Klicken Sie in der Seitenleiste auf "Datenquellen"
 2. Wählen Sie das entsprechende Unternehmen aus der Liste aus
@@ -36,6 +36,12 @@ Nachdem die DATEV-Verbindung hergestellt wurde, können Sie die Summen- und Sald
 5. Klicken Sie auf "Daten abrufen"
 6. Die abgerufenen Daten erscheinen in der Datenquellen-Liste des ausgewählten Unternehmens mit dem Wirtschaftsjahr im Filenamen
 7. Die Daten stehen sofort für Dashboards und KI-Berichte zur Verfügung
+
+Besteht diese Datenquelle bereits, So wird diese durch die neu abgerufene Datenquelle ersetzt. Das selbe Ergebnis erreichen Sie, wenn Sie direkt bei der Datenquelle rechts auf das Symbol für Aktualisierung bzw. Ersetzen klicken.
+
+## Summen Und Saldenliste für alle Mandanten abrufen
+
+Durch Klicken auf "Synchronisiere alle Unternehmen" werden die neuesten SuSa-Daten von DATEV für alle verfügbaren Geschäftsjahre für alle dem User zugeordneten Unternehmen, die eine valide Mandantennummer haben,  abgerufen und als Excel-Dateien in der Datenquellen-Liste gespeichert.
 
 ## Verbindung trennen
 
