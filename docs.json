@@ -121,5 +121,10 @@
       "github": "https://github.com/fweber67/docs/pull/1",
       "linkedin": "https://www.linkedin.com/showcase/finanzdash"
     }
+  },
+  "integrations": {
+    "gtm": {
+      "tagId": "GTM-K7NVK7GV"
+    }
   }
 }
