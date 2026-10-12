@@ -65,6 +65,14 @@
                 ]
               }
             ]
+          },
+          {
+            "group": "Use Cases",
+            "pages": [
+              "en/mandanten-reporting-automatisieren",
+              "en/datev-daten-automatisch-auswerten",
+              "en/ki-gestuetzte-finanzberichte"
+            ]
           }
         ]
       }
