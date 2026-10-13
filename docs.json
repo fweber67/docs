@@ -38,7 +38,8 @@
             "pages": [
               "mandanten-reporting-automatisieren",
               "datev-daten-automatisch-auswerten",
-              "ki-gestuetzte-finanzberichte"
+              "ki-gestuetzte-finanzberichte",
+              "ki-berichte-mit-dropdown"
             ]
           }
         ]
