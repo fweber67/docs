@@ -5,17 +5,17 @@ description: "Upload and manage financial data"
 icon: "database"
 ---
 
-Data sources are the foundation for dashboards and AI reports. As an **administrator**, you can upload financial data as a file or retrieve it automatically via the DATEV interface.
+Data sources are the foundation for dashboards and AI reports. As an **administrator**, you can upload financial data as a file, connect it to a cloud storage, or retrieve it automatically via the DATEV interface.
 
-## Upload a file
+## Upload a file manually
 
 1. Click "Data sources" in the sidebar
 2. Select a company from the dropdown
-3. Select the accounting source: DATEV MVZ Export, BMD Export, or Other
+3. Select the accounting source: DATEV MVZ export, BMD export, or Other
 4. Drag and drop the file into the upload field, or click to select a file
 5. Supported formats: CSV, XLSX, XLS, XML, TXT
 
-### Process DATEV files automatically
+### Process DATEV files
 
 If you select "DATEV MVZ Export" as the accounting source, the uploaded CSV file is processed automatically:
 
@@ -23,9 +23,34 @@ If you select "DATEV MVZ Export" as the accounting source, the uploaded CSV file
 - A progress bar shows the processing progress
 - The processed file is then available for dashboards and reports
 
+## Connect a cloud storage
+
+Administrators can connect FinanzDash to SharePoint or OneDrive. This allows files to be imported directly from the cloud storage and updated automatically later.
+
+1. Open the "Data sources" section in the sidebar
+2. Click "Connect cloud storage"
+3. Sign in to your cloud account in the window that opens
+4. Grant FinanzDash the required permissions
+5. After the connection is successful, the connected cloud account is shown
+
+The connection can be disconnected at any time. Already imported data sources remain intact.
+
+### Import a file from the cloud storage
+
+After connecting, you can select files directly from your cloud storage:
+
+1. Click "Add from cloud"
+2. Choose between recently used files and the folder view
+3. Search for the desired file
+4. Select the accounting source
+5. For a linked file, choose the update mode (automatic or require confirmation)
+6. Click "Add"
+
+Supported file formats are CSV, TXT, XLSX, XLS, and XML. The maximum file size is 50 MB. DATEV files are processed automatically during import if DATEV is selected as the accounting source.
+
 ## View data sources
 
-Below the upload area, you see a list of all data sources for the selected company. This list contains both uploaded files and data retrieved via the DATEV interface.
+Below the upload area, you see a list of all data sources for the selected company. This list includes manually uploaded files, files connected via cloud storage, and data retrieved via the DATEV interface.
 
 ## Download a file
 
@@ -38,17 +63,43 @@ If you want to replace a file with a newer version:
 1. Click the replace icon
 2. A warning shows which reports access this file and are affected
 3. Select the accounting system
-4. Upload the new data source manually, or start the DATEV import for the corresponding fiscal year (see [Retrieve the trial balance](/en/finanzdash-datev))
+4. Upload the new data source manually or start the DATEV import for the relevant fiscal year (see [DATEV integration](/en/finanzdash-datev))
 5. Click "Check new file"
 6. If the new file is compatible, you can upload it by clicking "Replace data source"
 7. The old file is replaced and all reports using this data source are automatically updated
+
+## Link and synchronize a data source with a cloud file
+
+An existing data source can be linked to a file in the cloud storage. This lets FinanzDash detect when the cloud file changes. FinanzDash checks daily at 4:05 a.m. for changes.
+
+Two modes are available for linking:
+
+- **Automatically update** – New cloud data is imported automatically
+- **Notify before updating** – FinanzDash first shows that a new version is available and the import must then be confirmed
+
+How do I link a cloud file?
+
+1. Click "Link to cloud file"
+2. Choose between recently used files and the folder view
+3. Search for the file you want
+4. Select the update mode for the link
+5. Click "Link"
+
+A linked data source shows its current synchronization status:
+
+- **Linked** – The connection is active
+- **Update available** – A new cloud version is waiting to be imported
+- **Error** – Synchronization failed
+
+If there is an error, you can retry the synchronization. A pending update can be imported directly from the data source list. The cloud link can also be removed at any time.
 
 ## Delete a file
 
 1. Click the delete icon next to a file
 2. You receive information and a warning about which reports use this data source
-3. Confirm the deletion by clicking "Delete anyway"
+3. If the file is linked to a cloud file, that dependency is also shown
+4. Confirm the deletion by clicking "Delete anyway"
 
 ## DATEV interface
 
-Administrators can use the DATEV API interface to retrieve financial data automatically, without uploading files manually. For details, see [DATEV integration](/en/finanzdash-datev).
+Administrators can use the DATEV API interface to retrieve financial data automatically. For details, see [DATEV integration](/en/finanzdash-datev).

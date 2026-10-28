@@ -14,7 +14,7 @@ Client users see dashboards and AI reports as cards and can view them, but not e
 1. After signing in, you land in the dashboard view automatically
 2. Select a company from the list on the left (you can filter with the search bar or press the `/` key)
 3. All available dashboards and the [published reports](/en/finanzdash-ki-berichte) created with the AI agent are displayed for the selected company
-4. Click a dashboard to see its reports, or click "View" on a published report to display that report.
+4. Click a dashboard to see its reports, or click "View" on a published report to display that report
 
 ## Report types
 
@@ -25,7 +25,7 @@ A dashboard can contain several report types, which are provided by default:
 - **Bank balances** – Development of today's bank balances compared to the previous day
 - **Working capital** – Chart showing working capital and its development
 - **Year comparison** – Monthly year-over-year comparison of individual P&L categories
-- **Monthly trend report** - Monthly trend report of individual P&L categories
+- **Monthly trend report** – Monthly trend report of individual P&L categories
 
 ## Structure of the default report types
 
@@ -50,7 +50,7 @@ A dashboard can contain several report types, which are provided by default:
 - **EBT** (earnings before taxes) = EBIT − Financial expenses
 - **Net income after taxes** = EBT − Taxes (account 8500)
 
-Account `7736` (depreciation) is pulled **out** of "Other expenses" (the `7` series) so that EBITDA does not include depreciation, and account `8500` (taxes) is pulled out of "Financial expenses" [...]
+Account `7736` (depreciation) is pulled **out** of "Other expenses" (the `7` series) so that EBITDA does not include depreciation, and account `8500` (taxes) is pulled out of "Financial expenses" (the `8` series) so that the profit before tax is calculated without taxes.
 
 ## Create a dashboard (administrator)
 
@@ -73,7 +73,7 @@ Account `7736` (depreciation) is pulled **out** of "Other expenses" (the `7` ser
 1. Select a company from the list on the left
 2. Click the delete icon on the dashboard
 3. Confirm with "OK"
-4. The dashboard, including all of its reports, is deleted
+4. The dashboard, including all reports, is deleted
 
 ## Add a report (administrator)
 
@@ -107,13 +107,17 @@ You can lock the dashboard layout to prevent accidental moves. The lock can be r
 
 - **Unlock** the layout first
 - Click **Arrange Layout**
-- **Resize** – Change the number of reports per row by clicking on the percentage above the report (100% = 1, 50% = 2, 33% = 3, and 25% = 4 report(s) per row)
+- **Resize** – Change the number of reports per row by clicking on the percentage above the report (100% = 1, 50% = 2, 33% = 3, and 25% = 4 reports per row)
 - **Move** – Drag a report by its grip handle to a different position using drag and drop
 - **Positions** are saved automatically
 - Click **Exit Arrange**
 - **Lock** the layout again
 
+If you changed the arrangement of a dashboard, you can restore the last saved arrangement via **Undo layout**.
+
+The feature restores the previous layout, including the positions and sizes of the reports. The restoration must then be confirmed.
+
 ## Arrange published reports (administrator)
 
 - Drag the **grip handle** on a report to reorder reports
-- **Changes** are saved automatically.
+- **Changes** are saved automatically

@@ -17,22 +17,39 @@ To create AI reports, you need:
 
 ## Client users
 
-Client users can view reports created by administrators via the dashboard of their assigned company. For the view, they can choose from 5 different chart types and color schemes, change the chart title, and show or hide the legend.
+Client users can view reports created by administrators via the dashboard of their assigned company. In the view, they can choose from 5 different chart types and color schemes, switch between chart and table views, and filter the report using the illustrated sections.
 
 ## Create a report (administrator)
 
 1. Click "Reports" in the sidebar
 2. Click "New report"
 3. The report editor opens:
-   - **Report name** - Enter a descriptive report name
-   - **Company** - Select a company
+   - **Report name** – Enter a descriptive report name
+   - **Company** – Select a company
    - **Selected data sources** – Select the primary data source
-   - **Additional files** – Optionally, you can add up to 4 more data sources (maximum 5 data sources total)
-   - **Data source preview** - After selecting at least 1 data source, a preview of the content of each data source appears below
+   - **Additional files** – Optionally, you can add up to 4 more data sources
+   - **Data source preview** – After selecting at least 1 data source, a preview of the content of each data source appears below
    - **Prompt** – Describe what the report should contain (for example, "Create a quarterly revenue report as a bar chart")
 4. Click "Create report"
 
 The AI agent analyzes the data and creates a report. This process can take a few seconds.
+
+## Prompt library
+
+The prompt library provides reusable instructions for AI reports. You can select an existing prompt and transfer it directly into the report editor.
+
+In the prompt library, you can:
+
+- Search for prompts
+- Filter prompts by category
+- Preview the prompt content
+- Mark prompts as favorites
+- Create your own prompts
+- Edit or delete your own prompts
+- Assign a name, category, and icon
+- Store the full prompt text
+
+The built-in prompts can be used, but not modified or deleted. Your own prompts are then available for future reports.
 
 ## Finalize the report (administrator)
 
@@ -40,29 +57,43 @@ After generation, the report appears as a draft. You receive a chart and a repor
 
 You can:
 
-- **View** – The report changes from draft to a finalized report
+- **View** – The report is finalized and displayed
 - **Refine** – Adjust the prompt or the data and regenerate the report
 
 After you click "View", the finalized report appears with the following components:
 
-- **Prompt** - By clicking "Prompt", you can see the prompt that was used again
-- **Management summary** - A brief, concise description of the content and results of the report
-- **Chart** - The report result shown as a chart (5 different chart types are available)
-- **Report** - From the chart view, you can switch to a table view
-- **Customize chart** - You can change the chart's color scheme (5 schemes are available), change the report title, and show or hide the legend
+- **Prompt** – By clicking "Prompt", you can see the prompt that was used again
+- **Management summary** – A brief, concise description of the content and results of the report
+- **Chart** – The report result shown as a chart (5 different chart types are available)
+- **Report** – From the chart view, you can switch to a table view
+- **Customize chart** – You can change the chart's color scheme (5 schemes are available), change the report title, and show or hide the legend
+
+A report can initially be saved as a draft. Drafts are not visible to client users and can be further edited or regenerated.
+
+Only publishing makes the report visible to the assigned client users.
 
 ## Publish a report (administrator)
 
-1. In the finalized report, click "Publish" at the top right, or later in the report list
+1. Click "Publish" in the top-right corner of the finalized report or later in the report list
 2. Confirm the publication by clicking "Save"
 
-Published reports can be viewed by the client users assigned to the company.
+Published reports can be viewed by client users assigned to the company.
 
 ## Edit a report (administrator)
 
 1. Click the edit icon on a report in the card or list view
 2. Select the data sources
 3. Click "Create report"
+
+When editing, you can not only change the data sources, but also adjust the prompt and regenerate the report afterward. An existing report can first be saved as a draft during this process.
+
+## Regenerate a report
+
+If you change the prompt or data sources of a report, you can regenerate the report. During processing, FinanzDash shows the current regeneration status.
+
+If a used data source was updated, a new report version can be generated. The previous version remains visible during processing until the new version is finished.
+
+If a data source needed for the report was deleted, you must first select a new data source before the report can be regenerated.
 
 ## Clone a report (administrator)
 
@@ -85,13 +116,24 @@ In the report list, you can:
 - Switch between card and list views
 - Search by report name or user
 - Filter by "All" or "My reports"
-- Sort by columns in the list view
+- Sort columns in the list view
+
+Each report card offers several actions:
+
+- **Preview** – Display the full report content
+- **Edit** – Change report settings, prompt, and data sources
+- **Clone** – Create a reusable copy
+- **Save as draft** – Save the report without publishing it temporarily
+- **Publish** – Make the report available to client users
+- **Delete** – Remove the report
+
+Hover over a card to display the action buttons.
 
 ## Token usage (administrator)
 
 Each report generation consumes tokens. At the top of the report view, you see a bar showing your monthly usage relative to your quota. Below that, the currently used AI model is displayed.
 
-Token quotas are assigned in tiers:
+The token quotas are assigned in tiers:
 
 - **Starter** – 500,000 tokens for occasional use
 - **Standard** – 1,500,000 tokens for regular use
