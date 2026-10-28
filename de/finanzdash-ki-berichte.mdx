@@ -34,13 +34,30 @@ Mandantenbenutzer können von Administratoren erstellte Berichte über das Dashb
 
 Der KI-Agent analysiert die Daten und erstellt einen Bericht. Dieser Vorgang kann einige Sekunden dauern.
 
+## Prompt-Bibliothek
+
+Die Prompt-Bibliothek stellt wiederverwendbare Anweisungen für KI-Berichte bereit. Sie können einen vorhandenen Prompt auswählen und direkt in den Berichts-Editor übernehmen.
+
+In der Prompt-Bibliothek können Sie:
+
+- Nach Prompts suchen
+- Prompts nach Kategorien filtern
+- Eine Vorschau des Prompt-Inhalts anzeigen
+- Prompts als Favoriten markieren
+- Eigene Prompts erstellen
+- Eigene Prompts bearbeiten oder löschen
+- Einen Namen, eine Kategorie und ein Symbol vergeben
+- Den vollständigen Prompt-Text hinterlegen
+
+Die integrierten Prompts können verwendet, aber nicht verändert oder gelöscht werden. Eigene Prompts stehen Ihnen anschließend für weitere Berichte zur Verfügung.
+
 ## Bericht fertig stellen (Administrator)
 
 Nach der Generierung erscheint der Bericht als Entwurf. Sie erhalten ein Diagramm und einen Bericht in Form einer Management Zusammenfassung
 
 Sie können:
 
-- **Ansehen** – Der Bericht wird vom Entwurf zum fertigen Bericht
+- **Ansehen** – Der Bericht wird fertig gestellt und angezeigt
 - **Verfeinern** – Den Prompt oder die Daten anpassen und den Bericht neu generieren
 
 Nachdem Sie auf "Ansehen" geklickt haben, erscheint der fertige Bericht mit folgenden Komponenten:
@@ -50,6 +67,10 @@ Nachdem Sie auf "Ansehen" geklickt haben, erscheint der fertige Bericht mit folg
 - **Diagramm** - das Ergebnis des Berichts als Diagramm dargestellt (es stehen 5 verschiedene Diagrammtypen zur Auswahl)
 - **Bericht** - Von der Diagramm Ansicht kann in eine Tabellen Ansicht gewechselt werden
 - **Diagramm anpassen** - Sie können das Farbschema des Diagramms ändern (es stehen 5 Schemata zur Verfügung), den Berichtstitel ändern und die Legende ein-bzw. ausblenden
+
+Ein Bericht kann zunächst als Entwurf gespeichert werden. Entwürfe sind noch nicht für Mandantenbenutzer sichtbar und können weiter bearbeitet oder neu generiert werden.
+
+Erst durch die Funktion „Veröffentlichen“ wird der Bericht für die zugewiesenen Mandantenbenutzer freigegeben.
 
 ## Bericht veröffentlichen (Administrator)
 
@@ -63,6 +84,16 @@ Veröffentlichte Berichte können von dem Unternehmen zugewiesenen Mandantenbenu
 1. Klicken Sie auf das Bearbeiten-Symbol eines Berichts in der Karten- oder Listenansicht
 2. Wählen Sie die Datenquellen aus
 3. Klicken Sie auf "Bericht erstellen"
+
+Beim Bearbeiten können Sie nicht nur die Datenquellen ändern, sondern auch den Prompt anpassen und den Bericht anschließend neu generieren. Ein vorhandener Bericht kann dabei zunächst als Entwurf gespeichert werden.
+
+## Bericht neu generieren
+
+Wenn Sie den Prompt oder die Datenquellen eines Berichts ändern, können Sie den Bericht neu generieren. Während der Verarbeitung zeigt FinanzDash den aktuellen Regenerierungsstatus an.
+
+Wenn eine verwendete Datenquelle aktualisiert wurde, kann eine neue Berichtsversion erzeugt werden. Die bisherige Version bleibt während der Verarbeitung sichtbar, bis die neue Version fertiggestellt ist.
+
+Wurde eine für den Bericht benötigte Datenquelle gelöscht, muss zunächst eine neue Datenquelle ausgewählt werden, bevor der Bericht erneut generiert werden kann.
 
 ## Bericht klonen (Administrator)
 
@@ -86,6 +117,17 @@ In der Berichtsliste können Sie:
 - Nach Berichtsnamen oder Benutzer suchen
 - Filtern nach "Alle" oder "Meine Berichte"
 - In der Listenansicht nach Spalten sortieren
+
+Jede Berichtskarte bietet mehrere Aktionen:
+
+- **Vorschau** – Den vollständigen Berichtsinhalt anzeigen
+- **Bearbeiten** – Berichtseinstellungen, Prompt und Datenquellen ändern
+- **Klonen** – Eine wiederverwendbare Kopie erstellen
+- **Als Entwurf speichern** – Den Bericht ohne Veröffentlichung zwischenspeichern
+- **Veröffentlichen** – Den Bericht für Mandantenbenutzer freigeben
+- **Löschen** – Den Bericht entfernen
+
+Bewegen Sie den Mauszeiger über eine Karte, um die Aktionsschaltflächen einzublenden.
 
 ## Token-Verbrauch (Administrator)
 
